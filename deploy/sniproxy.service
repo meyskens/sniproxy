@@ -1,0 +1,11 @@
+[Unit]
+Description=SNIProxy host
+Requires=Network.target
+After=Network.target
+
+[Service]
+ExecStart=/usr/local/bin/sniproxy host
+WorkingDirectory=/etc/sniproxy
+
+[Install]
+WantedBy=multi-user.target
